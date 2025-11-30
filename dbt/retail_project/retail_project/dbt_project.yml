@@ -1,0 +1,49 @@
+name: 'retail_project'
+version: '1.0.0'
+config-version: 2
+
+profile: 'retail_project'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  retail_project:
+
+    # --- STAGING LAYER ---
+    staging:
+      +schema: staging
+      +materialized: view
+
+    # --- INTERMEDIATE (kalau mau dipakai nanti) ---
+    intermediate:
+      +schema: intermediate
+      +materialized: view
+
+    # --- MARTS (dim + fact) ---
+    marts:
+      +schema: mart
+      +materialized: view
+      dimensions:
+        +materialized: view
+      facts:
+        +materialized: view
+
+    # --- ANALYTICS LAYER ---
+    analytics:
+      +schema: analytics
+      +materialized: table
+      features:
+        +materialized: table      # fitur untuk ML / advanced analysis
+      kpi:
+        +materialized: view       # KPI untuk dashboard
+      summaries:
+        +materialized: table      # ringkasan harian/bulanan dsb
+

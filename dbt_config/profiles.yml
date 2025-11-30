@@ -1,0 +1,12 @@
+retail_project: # <-- INI HARUS SAMA dengan field 'profile' di dbt_project.yml
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      threads: 4
+      host: postgres           # Nama service Docker (service-to-service communication)
+      port: 5432               # Port internal PostgreSQL (5432)
+      user: airflow            # POSTGRES_USER di docker-compose.yml
+      password: airflow_pass   # POSTGRES_PASSWORD di docker-compose.yml
+      dbname: retail_dwh       # POSTGRES_DB Anda
+      schema: marts            # Skema default untuk output model dbt Anda

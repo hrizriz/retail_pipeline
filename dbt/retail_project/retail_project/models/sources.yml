@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw          # <--- ini yang nanti dipakai di source('raw', ...)
+    database: retail_dwh
+    schema: raw        # schema tempat tabel ingestion
+    tables:
+      - name: customers_raw
+      - name: products_raw
+      - name: sales_transaction_raw
+      - name: stores_raw
+

@@ -1,0 +1,20 @@
+# Airflow
+airflow/logs/
+airflow/dags/__pycache__/
+airflow/plugins/__pycache__/
+
+# Postgres data (very heavy)
+postgres/data/
+
+# DBT
+dbt/retail_project/retail_project/target/
+dbt/retail_project/retail_project/dbt_packages/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local data
+data/*.tsv
+data/*.csv
+
