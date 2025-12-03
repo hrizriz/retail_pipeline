@@ -140,8 +140,3 @@ Generated or large directories intentionally excluded:
 - `__pycache__/`
 
 ---
-
-## 📄 License
-
-Free to use for learning, experimentation, and demonstration purposes.
-
