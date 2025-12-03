@@ -30,24 +30,24 @@ TSV Files → Airflow DAGs → PostgreSQL (raw schema)
 ```
 poc/
 ├── airflow/
-│   ├── dags/                  # Airflow ingestion & dbt DAGs
+│   ├── dags/                  
 │   ├── logs/
 │   └── plugins/
 │
-├── data/                      # Raw TSV datasets
+├── data/                      
 │
 ├── dbt/
 │   └── retail_project/
 │       └── retail_project/
 │           ├── models/
-│           │   ├── staging/         # stg_* cleaned models
-│           │   ├── marts/           # dim_* and fact_*
-│           │   ├── analytics/       # features, kpi, summaries
+│           │   ├── staging/         
+│           │   ├── marts/           
+│           │   ├── analytics/       
 │           │   └── sources.yml
 │           └── dbt_project.yml
 │
 ├── postgres/
-│   └── data/                  # PostgreSQL volume
+│   └── data/                  
 │
 ├── docker-compose.yml
 └── Dockerfile
