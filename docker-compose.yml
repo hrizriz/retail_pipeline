@@ -54,4 +54,16 @@ services:
         airflow scheduler &
         airflow webserver --port 8080
       "
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    environment:
+      MB_DB_FILE: /metabase-data/metabase.db
+    volumes:
+      - ./metabase-data:/metabase-data
+    ports:
+      - "3000:3000"
 
