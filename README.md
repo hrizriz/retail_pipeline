@@ -13,15 +13,8 @@ It simulates a modern data engineering architecture from raw ingestion to analyt
 
 ## 🚀 Architecture Overview
 
-```
-TSV Files → Airflow DAGs → PostgreSQL (raw schema)
-                           ↓
-                      dbt (staging)
-                           ↓
-                 dbt (mart: dimensions & facts)
-                           ↓
-                     dbt (analytics layer)
-```
+
+![Alt Text](data/img/arc.png)
 
 ---
 
