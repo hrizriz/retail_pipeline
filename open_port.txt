@@ -1,6 +1,0 @@
-sudo firewall-cmd --add-port=55432/tcp --permanent
-sudo firewall-cmd --reload
-
-sudo firewall-cmd --add-port=3000/tcp --permanent
-sudo firewall-cmd --reload
-
