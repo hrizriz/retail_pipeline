@@ -19,3 +19,5 @@ data/*.tsv
 data/*.csv
 
 .git-credentials
+open_port.txt
+podman_up.txt
